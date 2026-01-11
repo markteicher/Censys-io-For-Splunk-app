@@ -137,48 +137,72 @@ The app ingests raw JSON events using the following sourcetypes (as configured i
 ⸻
 
 🏠 Overview
-	•	Overview
-	•	Global asset counts
-	•	Hosts, domains, certs, risks
-	•	Data freshness & credit usage
+	- Overview
+	
+	- Global asset counts
+	
+	- Hosts, domains, certs, risks
+	
+	- Data freshness & credit usage
 
 ⸻
 
 🌐 Internet Scan (Core Censys)
 
 Derived from:
-	•	Host dataset
-	•	Certificates
-	•	DNS
-	•	WHOIS
-	•	Services
-	•	Software
+
+	- Host dataset
+	
+	- Certificates
+	
+	- DNS
+	
+	- WHOIS
+	
+	- Services
+	
+	- Software
 
 Dashboards
-	•	Hosts
-	•	Services & Ports
-	•	Software Inventory
-	•	Operating Systems
-	•	Autonomous Systems (ASN)
-	•	Locations (Geo)
-	•	DNS
-	•	WHOIS
-	•	TLS & Certificates
-	•	JARM Fingerprints
-	•	Labels / Tags
+	- Hosts
+	
+	- Services & Ports
+	
+	- Software Inventory
+	
+	- Operating Systems
+	
+	- Autonomous Systems (ASN)
+	
+	- Locations (Geo)
+	
+	- DNS
+	
+	- WHOIS
+	
+	- TLS & Certificates
+	
+	- JARM Fingerprints
+	
+	- Labels / Tags
 
 This directly maps to:
-	•	platform-host-dataset
-	•	host definitions (location, ASN, OS, DNS, WHOIS, services)
+	-	platform-host-dataset
+	
+	-   host definitions (location, ASN, OS, DNS, WHOIS, services)
 
 ⸻
 
 🔐 Certificates
-	•	Certificates
-	•	Certificate Transparency
-	•	Precertificates
-	•	Lite Certificates
-	•	Certificate History (for hunting)
+	- Certificates
+	
+	- Certificate Transparency
+	
+	- Precertificates
+	
+	- Lite Certificates
+	
+	- Certificate History (for hunting)
 
 Backed by CT + cert datasets
 Used heavily in threat hunting & detection logic
@@ -188,19 +212,29 @@ Used heavily in threat hunting & detection logic
 🎯 Threat Intelligence & Hunting
 
 Derived from:
-	•	Threat hunting docs
-	•	CVE context
-	•	C2 labels
-	•	JARM
-	•	Cert history
+
+	- Threat hunting docs
+	
+	- CVE context
+	
+	- C2 labels
+	
+	- JARM
+	
+	- Cert history
 
 Dashboards
-	•	Threat Overview
-	•	CVE Context
-	•	C2 Infrastructure
-	•	Malicious Infrastructure
-	•	Historical Changes
-	•	Detection Pivots
+	- Threat Overview
+	
+	- CVE Context
+	
+	- C2 Infrastructure
+	
+	- Malicious Infrastructure
+	
+	- Historical Changes
+	
+	- Detection Pivots
 
 This is where Censys shines — and where Splunk beats their UI.
 
