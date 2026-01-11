@@ -1,0 +1,95 @@
+<!--
+  Censys.io for Splunk App
+  Guided Setup UI
+  Location: default/data/ui/views/setup.xml
+-->
+
+<setup version="1.0">
+
+  <!-- ===================================================== -->
+  <!-- Censys API Configuration                              -->
+  <!-- ===================================================== -->
+  <block title="Censys API Configuration">
+    <text>
+      Configure credentials and connectivity for the Censys platform APIs.
+    </text>
+
+    <input type="text" key="api_id">
+      <label>Censys API ID</label>
+      <required>true</required>
+    </input>
+
+    <input type="password" key="api_secret">
+      <label>Censys API Secret</label>
+      <required>true</required>
+    </input>
+
+    <input type="text" key="api_base_url">
+      <label>API Base URL</label>
+      <default>https://search.censys.io/api</default>
+    </input>
+
+    <input type="boolean" key="verify_ssl">
+      <label>Verify SSL Certificates</label>
+      <default>true</default>
+    </input>
+
+    <input type="text" key="request_timeout">
+      <label>Request Timeout (seconds)</label>
+      <default>60</default>
+    </input>
+  </block>
+
+  <!-- ===================================================== -->
+  <!-- Index Configuration                                   -->
+  <!-- ===================================================== -->
+  <block title="Index Configuration">
+    <text>
+      Specify the Splunk index where Censys data will be stored.
+      The default index is recommended but may be changed.
+    </text>
+
+    <input type="text" key="index">
+      <label>Splunk Index</label>
+      <default>security_censys</default>
+      <required>true</required>
+    </input>
+  </block>
+
+  <!-- ===================================================== -->
+  <!-- Proxy Configuration                                   -->
+  <!-- ===================================================== -->
+  <block title="Proxy Configuration (Optional)">
+    <text>
+      Configure an enterprise proxy if required for outbound API access.
+    </text>
+
+    <input type="boolean" key="proxy_enabled">
+      <label>Enable Proxy</label>
+      <default>false</default>
+    </input>
+
+    <input type="text" key="proxy_url">
+      <label>Proxy URL</label>
+    </input>
+
+    <input type="text" key="proxy_username">
+      <label>Proxy Username</label>
+    </input>
+
+    <input type="password" key="proxy_password">
+      <label>Proxy Password</label>
+    </input>
+  </block>
+
+  <!-- ===================================================== -->
+  <!-- Modular Input Enablement                               -->
+  <!-- ===================================================== -->
+  <block title="Modular Input Enablement">
+    <text>
+      All modular inputs are disabled by default.
+      Enable individual inputs after setup to begin data ingestion.
+    </text>
+  </block>
+
+</setup>
