@@ -16,14 +16,6 @@ Censys.io for Splunk provides full visibility into your organization’s externa
 - Deep Context: Offers rich context on discovered assets, including software components, TLS details, WHOIS data, and vulnerability (CVE) information.
 - Platform & API: Delivers insights via an interactive search engine, API, and integrations with other security tools, supporting large-scale analysis
 
-
-# Censys.io for Splunk App
-
-## Overview
-
-Censys.io for Splunk provides **high-fidelity visibility into internet-facing infrastructure** using the Censys Search and ASM (Attack Surface Management) APIs.
-
-
 ---
 
 ## Supported Asset and Intelligence Types
