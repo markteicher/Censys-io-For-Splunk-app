@@ -1,0 +1,266 @@
+<nav search_view="search" color="#0B5FFF">
+
+  <!-- ========================= -->
+  <!-- Overview -->
+  <!-- ========================= -->
+  <view name="censys_overview">
+    <label>Overview</label>
+  </view>
+
+  <!-- ========================= -->
+  <!-- Internet Scan -->
+  <!-- ========================= -->
+  <collection label="Internet Scan">
+
+    <view name="censys_hosts">
+      <label>Hosts</label>
+    </view>
+
+    <view name="censys_services_ports">
+      <label>Services &amp; Ports</label>
+    </view>
+
+    <view name="censys_software">
+      <label>Software</label>
+    </view>
+
+    <view name="censys_operating_systems">
+      <label>Operating Systems</label>
+    </view>
+
+    <view name="censys_autonomous_systems">
+      <label>Autonomous Systems (ASN)</label>
+    </view>
+
+    <view name="censys_locations">
+      <label>Locations</label>
+    </view>
+
+    <view name="censys_dns">
+      <label>DNS</label>
+    </view>
+
+    <view name="censys_whois">
+      <label>WHOIS</label>
+    </view>
+
+    <view name="censys_tls">
+      <label>TLS</label>
+    </view>
+
+    <view name="censys_jarm">
+      <label>JARM</label>
+    </view>
+
+    <view name="censys_labels">
+      <label>Labels</label>
+    </view>
+
+  </collection>
+
+  <!-- ========================= -->
+  <!-- Certificates -->
+  <!-- ========================= -->
+  <collection label="Certificates">
+
+    <view name="censys_certificates">
+      <label>Certificates</label>
+    </view>
+
+    <view name="censys_certificate_transparency">
+      <label>Certificate Transparency</label>
+    </view>
+
+    <view name="censys_precertificates">
+      <label>Precertificates</label>
+    </view>
+
+    <view name="censys_lite_certificates">
+      <label>Lite Certificates</label>
+    </view>
+
+    <view name="censys_certificate_history">
+      <label>Certificate History</label>
+    </view>
+
+  </collection>
+
+  <!-- ========================= -->
+  <!-- Threat Intelligence -->
+  <!-- ========================= -->
+  <collection label="Threat Intelligence">
+
+    <view name="censys_threat_overview">
+      <label>Threat Overview</label>
+    </view>
+
+    <view name="censys_cve_context">
+      <label>CVE Context</label>
+    </view>
+
+    <view name="censys_c2_infrastructure">
+      <label>C2 Infrastructure</label>
+    </view>
+
+    <view name="censys_malicious_infrastructure">
+      <label>Malicious Infrastructure</label>
+    </view>
+
+    <view name="censys_detection_pivots">
+      <label>Detection Pivots</label>
+    </view>
+
+    <view name="censys_historical_changes">
+      <label>Historical Changes</label>
+    </view>
+
+  </collection>
+
+  <!-- ========================= -->
+  <!-- Attack Surface Management -->
+  <!-- ========================= -->
+  <collection label="Attack Surface Management">
+
+    <view name="censys_asm_overview">
+      <label>ASM Overview</label>
+    </view>
+
+    <view name="censys_asm_inventory">
+      <label>Inventory</label>
+    </view>
+
+    <view name="censys_asm_risks">
+      <label>Risks</label>
+    </view>
+
+    <view name="censys_asm_risk_categories">
+      <label>Risk Categories</label>
+    </view>
+
+    <view name="censys_asm_cve_risks">
+      <label>CVE Risks</label>
+    </view>
+
+    <view name="censys_asm_trends">
+      <label>Trends &amp; Benchmarks</label>
+    </view>
+
+    <view name="censys_asm_ports_protocols">
+      <label>Ports &amp; Protocols</label>
+    </view>
+
+    <view name="censys_asm_metrics">
+      <label>Metrics</label>
+    </view>
+
+    <view name="censys_asm_seeds">
+      <label>Seeds</label>
+    </view>
+
+    <view name="censys_asm_excluded_assets">
+      <label>Excluded Assets</label>
+    </view>
+
+  </collection>
+
+  <!-- ========================= -->
+  <!-- Logbook & Audit -->
+  <!-- ========================= -->
+  <collection label="Logbook &amp; Audit">
+
+    <view name="censys_logbook_events">
+      <label>Logbook Events</label>
+    </view>
+
+    <view name="censys_user_activity">
+      <label>User Activity</label>
+    </view>
+
+    <view name="censys_configuration_changes">
+      <label>Configuration Changes</label>
+    </view>
+
+    <view name="censys_asset_changes">
+      <label>Asset Changes</label>
+    </view>
+
+    <view name="censys_risk_changes">
+      <label>Risk Changes</label>
+    </view>
+
+  </collection>
+
+  <!-- ========================= -->
+  <!-- Organization & Access -->
+  <!-- ========================= -->
+  <collection label="Organization &amp; Access">
+
+    <view name="censys_users">
+      <label>Users</label>
+    </view>
+
+    <view name="censys_roles_permissions">
+      <label>Roles &amp; Permissions</label>
+    </view>
+
+    <view name="censys_api_keys">
+      <label>API Keys</label>
+    </view>
+
+    <view name="censys_credit_usage">
+      <label>Credit Usage</label>
+    </view>
+
+    <view name="censys_usage_trends">
+      <label>Usage Trends</label>
+    </view>
+
+  </collection>
+
+  <!-- ========================= -->
+  <!-- Operations -->
+  <!-- ========================= -->
+  <collection label="Operations">
+
+    <view name="censys_data_health">
+      <label>Data Health</label>
+    </view>
+
+    <view name="censys_api_status">
+      <label>API Status</label>
+    </view>
+
+    <view name="censys_ingestion_metrics">
+      <label>Ingestion Metrics</label>
+    </view>
+
+    <view name="censys_error_tracking">
+      <label>Error Tracking</label>
+    </view>
+
+  </collection>
+
+  <!-- ========================= -->
+  <!-- Reference -->
+  <!-- ========================= -->
+  <collection label="Reference">
+
+    <view name="censys_data_definitions">
+      <label>Data Definitions</label>
+    </view>
+
+    <view name="censys_query_examples">
+      <label>Query Examples</label>
+    </view>
+
+    <view name="censys_cenql_reference">
+      <label>CenQL Reference</label>
+    </view>
+
+    <view name="censys_field_explorer">
+      <label>Field Explorer</label>
+    </view>
+
+  </collection>
+
+</nav>
