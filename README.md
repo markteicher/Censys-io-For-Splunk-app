@@ -15,3 +15,287 @@ Censys.io for Splunk provides full visibility into your organization’s externa
 - Threat Hunting: Provides data and tools for security teams to hunt for threats, assess their impact, and investigate incidents.
 - Deep Context: Offers rich context on discovered assets, including software components, TLS details, WHOIS data, and vulnerability (CVE) information.
 - Platform & API: Delivers insights via an interactive search engine, API, and integrations with other security tools, supporting large-scale analysis
+
+
+# Censys.io for Splunk App
+
+## Overview
+
+Censys.io for Splunk provides **high-fidelity visibility into internet-facing infrastructure** using the Censys Search and ASM (Attack Surface Management) APIs.
+
+
+---
+
+## Supported Asset and Intelligence Types
+
+Censys provides visibility into the following externally observable assets and metadata:
+
+- IP Addresses
+- Hosts and Services
+- Open Ports and Protocols
+- Software and Product Fingerprints
+- SSL/TLS Certificates
+- Certificate Authorities
+- Domains and Hostnames
+- Autonomous System Numbers (ASNs)
+- Organizations
+- Geolocation Metadata
+- Internet-Wide Search Results
+- ASM Inventory and Discoveries (if licensed)
+
+---
+
+## Features
+
+### 🛡️ Core Capabilities
+
+| Feature | Description |
+|------|-------------|
+| 🌐 External Asset Discovery | Identify exposed hosts and services |
+| 🔍 Internet-Wide Search | Query Censys global scan index |
+| 🧭 Host Intelligence | Deep inspection of services and banners |
+| 🧬 Certificate Intelligence | SSL/TLS certificate visibility |
+| 🕵️ Exposure Context | Protocols, software, and metadata |
+| 🧾 Evidence Preservation | Raw API responses retained |
+
+---
+
+### 📈 Analytics and Visibility
+
+| Feature | Description |
+|------|-------------|
+| 📊 Exposure Trends | Track asset and service changes |
+| 🔄 First-Seen Detection | Identify newly observed assets |
+| 🧱 Infrastructure Mapping | IP → ASN → Organization |
+| 🔐 Certificate Monitoring | Certificate inventory and metadata |
+| 🧠 Investigative Pivoting | Pivot across IPs, domains, and certs |
+
+---
+
+### ⚙️ Operational Excellence
+
+| Feature | Description |
+|------|-------------|
+| 📡 Modular Input Framework | Secure API-based ingestion |
+| 🔑 Credential Management | Encrypted credential storage |
+| 🌐 Proxy Support | Enterprise proxy compatibility |
+| 🩺 Health Monitoring | API reachability and status |
+| 📋 Operational Logging | Full ingestion traceability |
+| ⏱️ Rate-Limit Awareness | Throttling-safe polling |
+
+---
+
+## 📊 Dashboards
+
+| Dashboard | Description |
+|---------|-------------|
+| Overview | High-level external exposure summary |
+| Hosts | Internet-exposed hosts and services |
+| Services | Port, protocol, and software analysis |
+| Certificates | SSL/TLS certificate inventory |
+| Domains | Domain and hostname visibility |
+| ASN Exposure | ASN-level exposure analysis |
+| New Assets | Newly observed assets |
+| Search Analytics | Search query trends |
+| Operations | Ingestion status and metrics |
+| Health | API and data freshness monitoring |
+
+Dashboards are designed for **investigation-first workflows**, not executive summaries.
+
+---
+
+## 🧾 Sourcetypes
+
+The app ingests raw JSON events using the following sourcetypes (as configured in default inputs):
+
+### Host and Service Intelligence
+- censys:host
+- censys:service
+- censys:port
+
+### Certificate Intelligence
+- censys:certificate
+- censys:certificate_authority
+
+### Search and Discovery
+- censys:search_result
+- censys:query_result
+
+### Attribution and Context
+- censys:domain
+- censys:asn
+- censys:organization
+- censys:geolocation
+
+### ASM (If Licensed)
+- censys:asm_asset
+- censys:asm_finding
+- censys:asm_inventory
+
+### Operational Telemetry
+- censys:collector_status
+- censys:collector_error
+
+---
+
+## 🧭 Navigation Structure
+
+Navigation matches default data UI configuration:
+
+### Overview
+- Overview
+
+### Dashboards
+- Hosts
+- Services
+- Certificates
+- Domains
+- ASN Exposure
+- New Assets
+- Search Analytics
+- Operations
+- Health
+
+### Manage
+- Inventory
+- Search Queries
+- Watchlists
+- ASM Assets
+- ASM Findings
+
+### Platform
+- Inputs
+- API Status
+- Operational Logs
+
+### Help
+- Support and Troubleshooting
+
+---
+
+## Deployment
+
+### Step 1: Install the App
+
+1. Download Censys_For_Splunk_App-1.0.0.tar.gz
+2. In Splunk Web, go to Apps → Manage Apps
+3. Select Install app from file
+4. Upload the package
+5. Restart Splunk if prompted
+
+---
+
+### Step 2: Configure the App
+
+This app uses a guided setup workflow to ensure secure and compliant configuration.
+
+Navigate to Apps → Censys.io for Splunk → Setup to configure:
+
+- Censys API credentials (stored securely)
+- Optional enterprise proxy settings
+- Modular input enablement and polling intervals
+
+All inputs are disabled by default and must be explicitly enabled.
+
+#### API Configuration
+- Censys API ID
+- Censys API Secret
+- API Base URL  
+  https://search.censys.io/api
+- Request Timeout
+- Verify SSL Certificates
+
+#### Proxy Configuration (Optional)
+- Enable Proxy
+- Proxy URL
+- Proxy Username
+- Proxy Password
+
+#### Data Inputs
+- Host Lookups
+- Search Queries
+- Certificate Inventory
+- Domain Monitoring
+- ASN Monitoring
+- ASM Inventory (if licensed)
+
+---
+
+### Step 3: Validate Configuration
+
+- Test API connectivity
+- Validate authentication
+- Verify API plan and ASM entitlements
+- Automatic validation on first launch
+
+---
+
+### Step 4: Verify Data Collection
+
+Run the following search in Splunk:
+
+    index=security_censys sourcetype=censys:*
+    | stats count by sourcetype
+
+---
+
+## 📦 Requirements
+
+- Splunk Enterprise or Splunk Cloud
+- Python 3.x (Splunk bundled)
+- Censys API Access (Search and/or ASM)
+- Network access to Censys APIs
+
+---
+
+## ✅ AppInspect Compliance
+
+- Proper Splunk directory structure
+- No hardcoded credentials
+- Inputs disabled by default
+- Encrypted credential storage
+- app.manifest included
+- Apache License
+- Setup-based configuration
+
+---
+
+## 🛠️ Troubleshooting
+
+### No Data Appearing
+- Verify API credentials and permissions
+- Confirm inputs are enabled
+- Check API rate limits
+- Review Splunk internal logs
+
+### API Errors
+- Validate API plan capabilities
+- Confirm ASM entitlements (if used)
+- Check Censys service availability
+
+### Proxy Issues
+- Validate proxy connectivity
+- Confirm SSL inspection compatibility
+- Test proxy reachability from Splunk
+
+---
+
+## 📚 References
+
+- Censys Search API  
+  https://search.censys.io/api
+
+- Censys ASM Documentation  
+  https://docs.censys.com
+
+- Censys Python SDK  
+  https://github.com/censys/censys-python
+
+- Splunk Documentation  
+  https://docs.splunk.com
+
+---
+
+## 📜 License
+
+Apache License
