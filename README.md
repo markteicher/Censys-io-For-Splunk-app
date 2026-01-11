@@ -130,13 +130,13 @@ The app ingests raw JSON events using the following sourcetypes (as configured i
 
 ---
 
-🧭 Proposed Navigation Structure
+## 🧭 Navigation Structure
 
 (Splunk default/data/ui/nav/default.xml equivalent)
 
 ⸻
 
-🏠 Overview
+## Overview
 	- Overview
 	
 	- Global asset counts
@@ -147,7 +147,7 @@ The app ingests raw JSON events using the following sourcetypes (as configured i
 
 ⸻
 
-🌐 Internet Scan (Core Censys)
+# 🌐 Internet Scan (Core Censys)
 
 Derived from:
 
@@ -163,7 +163,7 @@ Derived from:
 	
 	- Software
 
-Dashboards
+# Dashboards
 	- Hosts
 	
 	- Services & Ports
@@ -193,7 +193,7 @@ This directly maps to:
 
 ⸻
 
-🔐 Certificates
+# 🔐 Certificates
 	- Certificates
 	
 	- Certificate Transparency
@@ -209,7 +209,7 @@ Used heavily in threat hunting & detection logic
 
 ⸻
 
-🎯 Threat Intelligence & Hunting
+# 🎯 Threat Intelligence & Hunting
 
 Derived from:
 
@@ -223,7 +223,7 @@ Derived from:
 	
 	- Cert history
 
-Dashboards
+# Dashboards
 	- Threat Overview
 	
 	- CVE Context
@@ -240,11 +240,11 @@ This is where Censys shines — and where Splunk beats their UI.
 
 ⸻
 
-🧠 Attack Surface Management (ASM)
+# 🧠 Attack Surface Management (ASM)
 
 Clean separation from Internet Scan.
 
-Dashboards
+# Dashboards
 	•	ASM Overview
 	•	Inventory
 	•	Risks
@@ -265,13 +265,13 @@ Mapped exactly to:
 
 ⸻
 
-📓 Logbook & Audit
+# 📓 Logbook & Audit
 
 Derived from:
 	•	Logbook API
 	•	Org audit logging
 
-Dashboards
+# Dashboards
 	•	Logbook Events
 	•	User Activity
 	•	Configuration Changes
@@ -282,18 +282,18 @@ This answers your earlier question about:
 
 “How do we find users, permissions, and activity?”
 
-→ Logbook + Org Management APIs
+# → Logbook + Org Management APIs
 
 ⸻
 
-👥 Organization & Access
+# 👥 Organization & Access
 
 Derived from:
 	•	Org management
 	•	RBAC docs
 	•	Credits
 
-Dashboards
+# Dashboards
 	•	Users
 	•	Roles & Permissions
 	•	API Keys
@@ -301,8 +301,8 @@ Dashboards
 	•	Usage Trends
 
 ⸻
+# ⚙️ Operations
 
-⚙️ Operations
 	•	Data Health
 	•	API Status
 	•	Ingestion Metrics
@@ -310,46 +310,15 @@ Dashboards
 	•	Rate-Limit Visibility
 
 ⸻
-
-📚 Reference
+# 📚 Reference
 	•	Data Definitions
 	•	Query Examples
 	•	CenQL Reference
 	•	Field Explorer
 
 
-## 🧭 Navigation Structure
 
-Navigation matches default data UI configuration:
 
-### Overview
-- Overview
-
-### Dashboards
-- Hosts
-- Services
-- Certificates
-- Domains
-- ASN Exposure
-- New Assets
-- Search Analytics
-- Operations
-- Health
-
-### Manage
-- Inventory
-- Search Queries
-- Watchlists
-- ASM Assets
-- ASM Findings
-
-### Platform
-- Inputs
-- API Status
-- Operational Logs
-
-### Help
-- Support and Troubleshooting
 
 ---
 
