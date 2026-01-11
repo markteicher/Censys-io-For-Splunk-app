@@ -130,6 +130,160 @@ The app ingests raw JSON events using the following sourcetypes (as configured i
 
 ---
 
+🧭 Proposed Navigation Structure
+
+(Splunk default/data/ui/nav/default.xml equivalent)
+
+⸻
+
+🏠 Overview
+	•	Overview
+	•	Global asset counts
+	•	Hosts, domains, certs, risks
+	•	Data freshness & credit usage
+
+⸻
+
+🌐 Internet Scan (Core Censys)
+
+Derived from:
+	•	Host dataset
+	•	Certificates
+	•	DNS
+	•	WHOIS
+	•	Services
+	•	Software
+
+Dashboards
+	•	Hosts
+	•	Services & Ports
+	•	Software Inventory
+	•	Operating Systems
+	•	Autonomous Systems (ASN)
+	•	Locations (Geo)
+	•	DNS
+	•	WHOIS
+	•	TLS & Certificates
+	•	JARM Fingerprints
+	•	Labels / Tags
+
+This directly maps to:
+	•	platform-host-dataset
+	•	host definitions (location, ASN, OS, DNS, WHOIS, services)
+
+⸻
+
+🔐 Certificates
+	•	Certificates
+	•	Certificate Transparency
+	•	Precertificates
+	•	Lite Certificates
+	•	Certificate History (for hunting)
+
+Backed by CT + cert datasets
+Used heavily in threat hunting & detection logic
+
+⸻
+
+🎯 Threat Intelligence & Hunting
+
+Derived from:
+	•	Threat hunting docs
+	•	CVE context
+	•	C2 labels
+	•	JARM
+	•	Cert history
+
+Dashboards
+	•	Threat Overview
+	•	CVE Context
+	•	C2 Infrastructure
+	•	Malicious Infrastructure
+	•	Historical Changes
+	•	Detection Pivots
+
+This is where Censys shines — and where Splunk beats their UI.
+
+⸻
+
+🧠 Attack Surface Management (ASM)
+
+Clean separation from Internet Scan.
+
+Dashboards
+	•	ASM Overview
+	•	Inventory
+	•	Risks
+	•	Risk Categories
+	•	CVE Risks
+	•	Trends & Benchmarks
+	•	Ports & Protocols
+	•	Metrics
+	•	Seeds
+	•	Excluded Assets
+
+Mapped exactly to:
+	•	ASM dashboards
+	•	ASM metrics
+	•	ASM seeds
+	•	ASM risks
+	•	ASM trends
+
+⸻
+
+📓 Logbook & Audit
+
+Derived from:
+	•	Logbook API
+	•	Org audit logging
+
+Dashboards
+	•	Logbook Events
+	•	User Activity
+	•	Configuration Changes
+	•	Risk Changes
+	•	Asset Changes
+
+This answers your earlier question about:
+
+“How do we find users, permissions, and activity?”
+
+→ Logbook + Org Management APIs
+
+⸻
+
+👥 Organization & Access
+
+Derived from:
+	•	Org management
+	•	RBAC docs
+	•	Credits
+
+Dashboards
+	•	Users
+	•	Roles & Permissions
+	•	API Keys
+	•	Credit Usage
+	•	Usage Trends
+
+⸻
+
+⚙️ Operations
+	•	Data Health
+	•	API Status
+	•	Ingestion Metrics
+	•	Error Tracking
+	•	Rate-Limit Visibility
+
+⸻
+
+📚 Reference
+	•	Data Definitions
+	•	Query Examples
+	•	CenQL Reference
+	•	Field Explorer
+
+
 ## 🧭 Navigation Structure
 
 Navigation matches default data UI configuration:
