@@ -96,37 +96,114 @@ Dashboards are designed for **investigation-first workflows**, not executive sum
 
 ---
 
-## 🧾 Sourcetypes
+# Censys for Splunk App  
+## Sourcetype → Dashboard Mapping (Authoritative)
 
-The app ingests raw JSON events using the following sourcetypes (as configured in default inputs):
+---
 
-### Host and Service Intelligence
-- censys:host
-- censys:service
-- censys:port
+## 🟦 Core Internet Scan (Data Plane)
 
-### Certificate Intelligence
-- censys:certificate
-- censys:certificate_authority
+| Sourcetype | Dashboards |
+|-----------|------------|
+| `censys:host` | Overview, Hosts, Inventory, Locations, Autonomous Systems |
+| `censys:host:service` | Services & Ports, Ports & Protocols |
+| `censys:host:software` | Software, Operating Systems |
+| `censys:host:os` | Operating Systems |
+| `censys:host:dns` | DNS |
+| `censys:host:whois` | WHOIS |
+| `censys:host:tls` | TLS |
+| `censys:host:jarm` | JARM |
+| `censys:host:label` | Labels |
+| `censys:location` | Locations |
+| `censys:asn` | Autonomous Systems |
 
-### Search and Discovery
-- censys:search_result
-- censys:query_result
+---
 
-### Attribution and Context
-- censys:domain
-- censys:asn
-- censys:organization
-- censys:geolocation
+## 🟨 Certificates & Cryptography
 
-### ASM (If Licensed)
-- censys:asm_asset
-- censys:asm_finding
-- censys:asm_inventory
+| Sourcetype | Dashboards |
+|-----------|------------|
+| `censys:certificate` | Certificates |
+| `censys:certificate:transparency` | Certificate Transparency |
+| `censys:certificate:precertificate` | Precertificates |
+| `censys:certificate:lite` | Lite Certificates |
+| `censys:certificate:history` | Certificate History |
+| `censys:certificate:cve` | CVE Context |
 
-### Operational Telemetry
-- censys:collector_status
-- censys:collector_error
+---
+
+## 🟥 Threat Intelligence & Hunting
+
+| Sourcetype | Dashboards |
+|-----------|------------|
+| `censys:threat` | Threat Overview |
+| `censys:cve:context` | CVE Context |
+| `censys:c2:label` | C2 Infrastructure |
+| `censys:malicious:infrastructure` | Malicious Infrastructure |
+| `censys:detection:pivot` | Detection Pivots |
+| `censys:host:history` | Historical Changes |
+
+---
+
+## 🟩 Attack Surface Management (ASM)
+
+| Sourcetype | Dashboards |
+|-----------|------------|
+| `censys:asm:asset` | ASM Overview, Inventory |
+| `censys:asm:risk` | Risks |
+| `censys:asm:risk:category` | Risk Categories |
+| `censys:asm:cve:risk` | CVE Risks |
+| `censys:asm:trend` | Trends & Benchmarks |
+| `censys:asm:port` | Ports & Protocols |
+| `censys:asm:metric` | Metrics |
+| `censys:asm:seed` | Seeds |
+| `censys:asm:excluded_asset` | Excluded Assets |
+
+---
+
+## 🟪 Logbook, Audit & Change Tracking
+
+| Sourcetype | Dashboards |
+|-----------|------------|
+| `censys:logbook:event` | Logbook Events |
+| `censys:audit:user_activity` | User Activity |
+| `censys:audit:role_change` | Configuration Changes |
+| `censys:audit:asset_change` | Asset Changes |
+| `censys:audit:risk_change` | Risk Changes |
+
+---
+
+## 🟫 Organization, Access & Usage
+
+| Sourcetype | Dashboards |
+|-----------|------------|
+| `censys:user` | Users |
+| `censys:role` | Roles & Permissions |
+| `censys:api_key` | API Keys |
+| `censys:credit:usage` | Credit Usage |
+| `censys:usage:trend` | Usage Trends |
+
+---
+
+## ⚙️ Operations & Health
+
+| Sourcetype | Dashboards |
+|-----------|------------|
+| `censys:health` | Data Health |
+| `censys:api:status` | API Status |
+| `censys:ingestion:metric` | Ingestion Metrics |
+| `censys:error` | Error Tracking |
+
+---
+
+## 📘 Reference & Enablement
+
+| Sourcetype | Dashboards |
+|-----------|------------|
+| `censys:data:definition` | Data Definitions |
+| `censys:query:example` | Query Examples |
+| `censys:cenql:reference` | CenQL Reference |
+| `censys:field:definition` | Field Explorer |
 
 ---
 
