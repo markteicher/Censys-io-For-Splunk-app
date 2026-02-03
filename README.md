@@ -6,7 +6,9 @@ Censys.io is a leading internet intelligence platform providing real-time visibi
 
 ## Overview
 
-Censys.io for Splunk provides full visibility into your organization’s externally exposed digital footprint by querying the Censys public scan database using Python-based modular inputs. This Splunk App enables security teams to **discover, monitor, analyze, and operationalize external attack surface data** directly within Splunk—without reliance on the Censys web UI.
+Censys.io for Splunk provides full visibility into an organization’s externally exposed digital footprint by querying the Censys public scan database using Python-based modular inputs. 
+
+This Splunk App enables security teams to **discover, monitor, analyze, and operationalize external attack surface data** directly within Splunk—without reliance on the Censys Web User Interfacel
 
 ---
 
