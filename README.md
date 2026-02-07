@@ -1,4 +1,4 @@
-# Censys-io-For-Splunk-app
+# Censys.IO for Splunk App
 
 ## Introduction
 
