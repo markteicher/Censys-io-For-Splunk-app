@@ -1,3 +1,5 @@
+![Censys](docs/images/censys_io_logo.jpg)
+
 # Censys.IO for Splunk App
 
 ## Introduction
